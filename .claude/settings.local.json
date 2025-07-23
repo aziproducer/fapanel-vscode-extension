@@ -8,7 +8,15 @@
       "Bash(ls:*)",
       "Bash(split:*)",
       "Bash(git reset:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git config:*)",
+      "Bash(gh repo create:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(winget install:*)",
+      "Bash(gh:*)",
+      "Bash(refreshenv)"
     ],
     "deny": []
   }

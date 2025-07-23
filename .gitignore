@@ -33,7 +33,7 @@ sample/
 # Temporary files (too large for git)
 tmp/
 
-# Only keep essential documentation
+# Keep essential documentation for continuation of work
 !tmp/作業メモ_2025-07-23.md
 !tmp/シンタックスハイライト_完全実装チェックリスト.md
 
