@@ -1,0 +1,90 @@
+{
+  "name": "fapanel-language-support",
+  "displayName": "FA-PANEL Language Support",
+  "description": "FA-PANEL language support with syntax highlighting and auto-completion",
+  "version": "0.1.0",
+  "publisher": "fa-panel-dev",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Other"
+  ],
+  "keywords": [
+    "fa-panel",
+    "automation",
+    "industrial",
+    "scada",
+    "hmi"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "fapanel",
+        "aliases": [
+          "FA-PANEL",
+          "fapanel"
+        ],
+        "extensions": [
+          ".xml",
+          ".fap"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "fapanel",
+        "scopeName": "source.fapanel",
+        "path": "./syntaxes/fapanel.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "fapanel",
+        "path": "./snippets/fapanel.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "fapanel.showReferences",
+        "title": "Show FA-PANEL References"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onLanguage:fapanel"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.60.0",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^4.4.0",
+    "vsce": "^2.0.0",
+    "@vscode/test-electron": "^2.0.0"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^7.0.0",
+    "vscode-languageserver": "^7.0.0",
+    "vscode-languageserver-textdocument": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/fapanel-vscode-extension"
+  },
+  "license": "MIT"
+}

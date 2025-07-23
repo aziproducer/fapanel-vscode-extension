@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(findstr:*)",
+      "Bash(powershell:*)",
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(split:*)",
+      "Bash(git reset:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": []
+  }
+}

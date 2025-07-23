@@ -1,0 +1,255 @@
+{
+  "Event OnInitialize": {
+    "prefix": "event-init",
+    "body": [
+      "event OnInitialize()",
+      "{",
+      "\t${1:// 初期化処理}",
+      "}"
+    ],
+    "description": "OnInitialize event handler"
+  },
+  "Event OnMouseUp": {
+    "prefix": "event-mouseup",
+    "body": [
+      "event OnMouseUp(button)",
+      "{",
+      "\t${1:// マウスアップ処理}",
+      "}"
+    ],
+    "description": "OnMouseUp event handler"
+  },
+  "Event OnMouseDown": {
+    "prefix": "event-mousedown",
+    "body": [
+      "event OnMouseDown(button)",
+      "{",
+      "\t${1:// マウスダウン処理}",
+      "}"
+    ],
+    "description": "OnMouseDown event handler"
+  },
+  "Event OnTextChanged": {
+    "prefix": "event-textchanged",
+    "body": [
+      "event OnTextChanged(&text)",
+      "{",
+      "\t${1:// テキスト変更処理}",
+      "}"
+    ],
+    "description": "OnTextChanged event handler"
+  },
+  "Event OnSelectChanged": {
+    "prefix": "event-selectchanged",
+    "body": [
+      "event OnSelectChanged(index, text)",
+      "{",
+      "\t${1:// 選択変更処理}",
+      "}"
+    ],
+    "description": "OnSelectChanged event handler"
+  },
+  "Variable Declaration": {
+    "prefix": "var",
+    "body": [
+      "var ${1:variableName}${2: = ${3:value}};"
+    ],
+    "description": "Variable declaration"
+  },
+  "If Statement": {
+    "prefix": "if",
+    "body": [
+      "if (${1:condition})",
+      "{",
+      "\t${2:// 処理}",
+      "}"
+    ],
+    "description": "If statement"
+  },
+  "If-Else Statement": {
+    "prefix": "ifelse",
+    "body": [
+      "if (${1:condition})",
+      "{",
+      "\t${2:// 真の処理}",
+      "}",
+      "else",
+      "{",
+      "\t${3:// 偽の処理}",
+      "}"
+    ],
+    "description": "If-else statement"
+  },
+  "For Loop": {
+    "prefix": "for",
+    "body": [
+      "for (var ${1:i} = 0; ${1:i} < ${2:length}; ++${1:i})",
+      "{",
+      "\t${3:// ループ処理}",
+      "}"
+    ],
+    "description": "For loop"
+  },
+  "Function Definition": {
+    "prefix": "function",
+    "body": [
+      "function ${1:functionName}(${2:parameters})",
+      "{",
+      "\t${3:// 関数処理}",
+      "\treturn ${4:value};",
+      "}"
+    ],
+    "description": "Function definition"
+  },
+  "Edit.GetProperty": {
+    "prefix": "getprop",
+    "body": [
+      "::Edit.GetProperty(${1:obj}, ${2:\"propertyName\"}, ${3:value})"
+    ],
+    "description": "Get object property"
+  },
+  "Edit.SetProperty": {
+    "prefix": "setprop",
+    "body": [
+      "::Edit.SetProperty(${1:obj}, ${2:\"propertyName\"}, ${3:value});"
+    ],
+    "description": "Set object property"
+  },
+  "Edit.GetCurrentObject": {
+    "prefix": "getcurrent",
+    "body": [
+      "::Edit.GetCurrentObject()"
+    ],
+    "description": "Get current object"
+  },
+  "Edit.OpenModalDialog": {
+    "prefix": "opendialog",
+    "body": [
+      "::Edit.OpenModalDialog(${1:\"DialogName\"}, ${2:parameter}, ${3:\"DialogType\"})"
+    ],
+    "description": "Open modal dialog"
+  },
+  "MsgBox": {
+    "prefix": "msgbox",
+    "body": [
+      "::MsgBox(${1:\"message\"});"
+    ],
+    "description": "Show message box"
+  },
+  "Array Creation": {
+    "prefix": "array",
+    "body": [
+      "var ${1:arrayName} = c(${2:\"item1\"}, ${3:\"item2\"});"
+    ],
+    "description": "Create array with c() function"
+  },
+  "Object Button": {
+    "prefix": "obj-button",
+    "body": [
+      "<OBJ clid=\"Button\" Text=\"${1:Button}\" Top=\"${2:0}\" Left=\"${3:0}\" Height=\"${4:20}\" Width=\"${5:80}\" Event=\"",
+      "event OnMouseUp(button)",
+      "{",
+      "\t${6:// ボタンクリック処理}",
+      "}",
+      "\">"
+    ],
+    "description": "FA-PANEL Button object"
+  },
+  "Object EditBox": {
+    "prefix": "obj-editbox",
+    "body": [
+      "<OBJ clid=\"EditBox\" Text=\"${1:}\" Top=\"${2:0}\" Left=\"${3:0}\" Height=\"${4:20}\" Width=\"${5:100}\" Event=\"",
+      "event OnTextChanged(&text)",
+      "{",
+      "\t${6:// テキスト変更処理}",
+      "}",
+      "\">"
+    ],
+    "description": "FA-PANEL EditBox object"
+  },
+  "Object Label": {
+    "prefix": "obj-label",
+    "body": [
+      "<OBJ clid=\"Label\" Text=\"${1:Label}\" Top=\"${2:0}\" Left=\"${3:0}\" Height=\"${4:20}\" Width=\"${5:80}\">"
+    ],
+    "description": "FA-PANEL Label object"
+  },
+  "Switch Statement": {
+    "prefix": "switch",
+    "body": [
+      "switch (${1:variable})",
+      "{",
+      "\tcase ${2:value1}:",
+      "\t\t${3:// 処理1}",
+      "\t\tbreak;",
+      "\tcase ${4:value2}:",
+      "\t\t${5:// 処理2}",
+      "\t\tbreak;",
+      "\tdefault:",
+      "\t\t${6:// デフォルト処理}",
+      "\t\tbreak;",
+      "}"
+    ],
+    "description": "Switch statement"
+  },
+  "Do-While Loop": {
+    "prefix": "dowhile",
+    "body": [
+      "do",
+      "{",
+      "\t${1:// ループ処理}",
+      "}",
+      "while (${2:condition});"
+    ],
+    "description": "Do-while loop"
+  },
+  "Array Creation": {
+    "prefix": "c-array",
+    "body": [
+      "c(${1:\"item1\"}, ${2:\"item2\"}, ${3:\"item3\"})"
+    ],
+    "description": "Create array with c() function"
+  },
+  "String Functions": {
+    "prefix": "strfunc",
+    "body": [
+      "::${1|LeftStr,RightStr,MidStr,StrLen|}(${2:string}${3:, ${4:count}})"
+    ],
+    "description": "String manipulation functions"
+  },
+  "Type Conversion": {
+    "prefix": "convert",
+    "body": [
+      "::${1|Val,Str,Int,Float|}(${2:value})"
+    ],
+    "description": "Type conversion functions"
+  },
+  "Property Attribute": {
+    "prefix": "getattr",
+    "body": [
+      "::Edit.GetPropertyAttr(\"${1:ENUMLIST}\", ${2:vObj}, \"${3:_Property}\", ${4:vValue})"
+    ],
+    "description": "Get property attribute"
+  },
+  "String Search Replace": {
+    "prefix": "strops",
+    "body": [
+      "::${1|StrFind,StrReplace|}(${2:string}, ${3:search}${4:, ${5:replace}})"
+    ],
+    "description": "String search and replace functions"
+  },
+  "Type Check": {
+    "prefix": "typecheck",
+    "body": [
+      "::${1|IsObj,IsArray,IsNull|}(${2:value})"
+    ],
+    "description": "Type checking functions"
+  },
+  "Special Values": {
+    "prefix": "special",
+    "body": [
+      "#${1|NOTHING,N/A,ERROR,INVALID}#"
+    ],
+    "description": "FA-PANEL special values"
+  }
+}

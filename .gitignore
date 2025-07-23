@@ -1,0 +1,51 @@
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+out/
+*.vsix
+
+# Logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Sample data (contains proprietary FA-PANEL manual - not for public release)
+sample/
+
+# Temporary files (too large for git)
+tmp/
+
+# Only keep essential documentation
+!tmp/作業メモ_2025-07-23.md
+!tmp/シンタックスハイライト_完全実装チェックリスト.md
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/settings.json
+.idea/
